@@ -1385,7 +1385,11 @@ async function startServer() {
       console.log("Autonomous endpoint: POST /api/agents/autonomous");
     });
   } catch (error) {
-    console.error("Backend startup failed:", getErrorMessage(error));
+    catch (error) {
+  console.error("Backend startup failed:", error);
+  console.error(error?.stack || error);
+  process.exit(1);
+}
 
     if (db) {
       await db.close().catch(() => { });
