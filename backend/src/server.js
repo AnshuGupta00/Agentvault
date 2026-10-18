@@ -1397,5 +1397,13 @@ async function startServer() {
     process.exit(1);
   }
 
+  const connectionOptions = {
+  host: process.env.FALKORDB_HOST,
+  port: Number(process.env.FALKORDB_PORT),
+  username: process.env.FALKORDB_USERNAME,
+  password: process.env.FALKORDB_PASSWORD,
+};
+
+db = await FalkorDB.connect(connectionOptions);
 
 startServer();
