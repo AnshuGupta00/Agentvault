@@ -1,0 +1,179 @@
+
+/* ================================
+   AGENTVAULT MEMORY GRAPH
+================================ */
+
+.graph-visual-panel {
+  width: 100%;
+  margin-top: 24px;
+  padding: 24px;
+  background: #121620;
+  border: 1px solid #293246;
+  border-radius: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.graph-visual-panel h3 {
+  margin: 0 0 8px;
+  color: #f1f5f9;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.graph-visual-description {
+  margin: 0 0 20px;
+  color: #9ca9bd;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.graph-visual-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: #0c0e14;
+  border: 1px solid #252c3b;
+  border-radius: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #46516a #121620;
+}
+
+.graph-visual-svg {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.graph-edge {
+  stroke: #64748b;
+  stroke-width: 1.8;
+  stroke-dasharray: 5 4;
+  opacity: 0.8;
+}
+
+.graph-edge-label {
+  fill: #9ba9bf;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.graph-node {
+  stroke-width: 1.5;
+  transition: stroke 0.2s ease, fill 0.2s ease;
+}
+
+.graph-node-direct {
+  fill: #172c42;
+  stroke: #38bdf8;
+}
+
+.graph-node-neighbor {
+  fill: #302447;
+  stroke: #c084fc;
+}
+
+.graph-node-title {
+  fill: #f8fafc;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.graph-node-subtitle {
+  fill: #cbd5e1;
+  font-size: 10px;
+}
+
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.graph-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b7c1d2;
+  font-size: 12px;
+}
+
+.graph-legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.graph-legend-dot.direct {
+  background: #38bdf8;
+}
+
+.graph-legend-dot.neighbor {
+  background: #c084fc;
+}
+
+.graph-legend-dot.edge {
+  background: #64748b;
+}
+
+/* Evidence retrieval badges */
+
+.retrieval-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 6px 6px 6px 0;
+  padding: 5px 9px;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  background: #1b2230;
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.retrieval-badge.direct {
+  border-color: #075985;
+  background: #082f49;
+  color: #7dd3fc;
+}
+
+.retrieval-badge.neighbor {
+  border-color: #6b21a8;
+  background: #2e1065;
+  color: #d8b4fe;
+}
+
+@media (max-width: 768px) {
+  .graph-visual-panel {
+    padding: 14px;
+    margin-top: 16px;
+  }
+
+  .graph-visual-panel h3 {
+    font-size: 17px;
+  }
+
+  .graph-visual-description {
+    font-size: 12px;
+  }
+
+  .graph-visual-svg {
+    min-width: 620px;
+  }
+
+  .graph-legend {
+    gap: 10px;
+  }
+
+  .graph-legend-item {
+    font-size: 11px;
+  }
+}

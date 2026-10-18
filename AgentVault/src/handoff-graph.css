@@ -1,0 +1,21 @@
+/* AgentVault Research -> Planning handoff visualization */
+.handoff-panel { margin-top: 22px; }
+.handoff-graph-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--border, #e2e8f0); border-radius: 14px; background: var(--panel, #fff); }
+.handoff-graph-svg { display: block; width: 100%; min-width: 680px; height: auto; }
+.handoff-node { stroke-width: 1.5; }
+.handoff-node.agent { fill: #f8fafc; stroke: #cbd5e1; }
+.handoff-node.record { fill: #fff7ed; stroke: #fdba74; }
+.handoff-node.record.done { fill: #f0fdf4; stroke: #86efac; }
+.handoff-node-title { font-size: 17px; font-weight: 700; fill: #0f172a; }
+.handoff-node-subtitle { font-size: 12px; fill: #475569; }
+.handoff-edge-label { font-size: 10px; font-weight: 700; letter-spacing: .04em; fill: #64748b; }
+.handoff-graph-caption { font-size: 12px; fill: #64748b; }
+.handoff-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 16px 0 8px; }
+.handoff-toolbar p { overflow-wrap: anywhere; }
+.handoff-row { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+.handoff-row-main { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.handoff-status { display: inline-flex; align-items: center; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.handoff-status.received { background: #dcfce7; color: #166534; }
+.handoff-status.pending { background: #fef3c7; color: #92400e; }
+.handoff-row code, .handoff-toolbar code { overflow-wrap: anywhere; white-space: normal; }
+@media (max-width: 700px) { .handoff-toolbar { align-items: stretch; flex-direction: column; } .handoff-toolbar .primary-button { width: 100%; } }
